@@ -5,8 +5,8 @@ const Logo = () => {
     <div>
             <Link href="/">
                 
-                <Image className="hidden dark:block" src="./darkmode.svg" width={160} height={80} alt="logo" />
-                <Image className='flex dark:hidden' src="./lightmode.svg" width={160} height={80} alt="logo"/>
+                <Image className="hidden dark:block" src="/darkmode.svg" width={160} height={80} alt="logo" />
+                <Image className='flex dark:hidden' src="/lightmode.svg" width={160} height={80} alt="logo"/>
             </Link>
     </div>
   )

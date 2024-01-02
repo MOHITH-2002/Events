@@ -12,7 +12,7 @@ export default function Home() {
     <h1 className="font-bold text-justify text-3xl md:text-5xl">Use Our Platform to Host, Connect, and Celebrate Your Events!</h1>
      <p className="text-xl text-justify">Get a book and gain useful advice from mentors in prestigious firms with our international community.</p>
      <Button size="lg" asChild className="w-full sm:w-fit">
-              <Link href="/events">
+              <Link href="/events/create">
                 Explore Now
               </Link>
             </Button>

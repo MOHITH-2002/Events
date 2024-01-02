@@ -15,8 +15,8 @@ const Navitems = () => {
     <Link href="/contact">
     <Button variant="ghost" className={cn("text-[1rem] dark:text-gray-400 hover:text-blue-600",pathname==="/contact" && "text-blue-600 dark:text-blue-600")}>Contact</Button>
     </Link>
-    <Link href="/events">
-    <Button variant="ghost" className={cn("text-[1rem] dark:text-gray-400 hover:text-blue-600",pathname==="/events" && "text-blue-600 dark:text-blue-600")}>Events</Button>
+    <Link href="/events/create">
+    <Button variant="ghost" className={cn("text-[1rem] dark:text-gray-400 hover:text-blue-600",pathname==="/events/create" && "text-blue-600 dark:text-blue-600")}>Events</Button>
     </Link>
 
   </section>
