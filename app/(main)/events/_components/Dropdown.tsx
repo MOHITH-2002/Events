@@ -20,8 +20,9 @@ import {
 
 
 import { ICategory } from "@/lib/database/models/category-model";
-import { startTransition, useState } from "react";
+import { startTransition, useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
+import { createCategory, getAllCategory } from "@/lib/actions/category-actions";
 
 type DropdownTypeProps ={
     value?:string,
@@ -34,8 +35,19 @@ const Dropdown = ({onChangeHandler,value}:DropdownTypeProps) => {
     ])
 
 const handleAddCategory =()=>{
-    console.log(newCategory)
+    createCategory({ categoryName:newCategory.trim()}).then((category)=>{
+      setCategories((prevState)=>[...prevState,category])
+
+    })
 }
+useEffect(() => {
+  const getCategories = async() => {
+    const categoryList = await getAllCategory();
+    categoryList && setCategories(categoryList);
+  }
+  getCategories();
+}, []);
+
 
   return (
     <Select onValueChange={onChangeHandler} defaultValue={value}>

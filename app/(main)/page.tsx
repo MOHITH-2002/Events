@@ -1,16 +1,25 @@
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
+import Collections from './_components/Collections'
+import { getAllEvents } from '@/lib/actions/event-actions'
 
-export default function Home() {
+export default async function Home() {
+  const allEvents = await getAllEvents({
+    query:'',
+    category:'',
+    page:1,
+    limit:6
+  })
+  
   return (
     <>
     <section className="flex py-20">
 
    <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2">
     <div className="flex flex-col justify-center gap-8">
-    <h1 className="font-bold text-justify text-3xl md:text-5xl">Use Our Platform to Host, Connect, and Celebrate Your Events!</h1>
-     <p className="text-xl text-justify">Get a book and gain useful advice from mentors in prestigious firms with our international community.</p>
+    <h1 className="font-bold text-3xl md:text-5xl">Use Our Platform to Host, Connect, and Celebrate Your Events!</h1>
+     <p className="text-xl ">Get a book and gain useful advice from mentors in prestigious firms with our international community.</p>
      <Button size="lg" asChild className="w-full sm:w-fit">
               <Link href="/events/create">
                 Explore Now
@@ -33,10 +42,20 @@ export default function Home() {
       <span>
         hello
       </span>
-      <span>
-        hello
-      </span>
+      
     </section>
+    <div>
+      <Collections 
+      data={allEvents?.data}
+      emptyTitle="Not found"
+      emptySubtext="come back later"
+      collectionType="All_Events"
+      urlParamName=''
+      limit={6}
+      page={1}
+      totalPages={2}
+      />
+    </div>
     </>
   )
 }

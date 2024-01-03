@@ -18,6 +18,9 @@ const Navitems = () => {
     <Link href="/events/create">
     <Button variant="ghost" className={cn("text-[1rem] dark:text-gray-400 hover:text-blue-600",pathname==="/events/create" && "text-blue-600 dark:text-blue-600")}>Events</Button>
     </Link>
+    <Link href="/profile">
+    <Button variant="ghost" className={cn("text-[1rem] dark:text-gray-400 hover:text-blue-600",pathname==="/profile" && "text-blue-600 dark:text-blue-600")}>Profile</Button>
+    </Link>
 
   </section>
   );

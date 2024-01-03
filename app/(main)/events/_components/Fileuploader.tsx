@@ -49,7 +49,7 @@ export function Fileuploader({ imageUrl, onChangeHandler, setFiles }: FileUpload
           <h3 className="mb-2 mt-2 font-bold">Drag & Drop Image here</h3>
           <p className="mb-4 font-bold">Svg, Png, Jpeg</p>
           <Button type="button" className="rounded-sm bg-blue-600 hover:bg-blue-500">
-            Select from your computer
+            Insert an Image
           </Button>
         </div>
       )}

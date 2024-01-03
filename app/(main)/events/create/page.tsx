@@ -2,9 +2,11 @@ import { auth } from "@clerk/nextjs";
 import Eventform from "../_components/Event-form";
 
 
+
 const EventCreate = () => {
     const {sessionClaims} = auth();
     const userId = sessionClaims?.userId as string;
+
   return (<>
   <section className="pt-20">
     <div className="flex h-20 items-center justify-center bg-[#F5F5F5] dark:bg-accent">
