@@ -39,20 +39,7 @@ const Card = ({hidePrice,hasOrderLink,event}:cardProps) => {
         className="flex min-h-[230px] flex-col gap-3 p-5 md:gap-4"
       > 
         {/* IS EVENT CREATOR ... */}
-
-      {isEventCreator && !hidePrice && (
-        <>
-        
-        <div className="absolute right-2 top-2 flex flex-col gap-4 rounded-xl bg-gray-400  p-3 shadow-sm transition-all">
-          <Link href={`/events/${event._id}/update`}>
-            <Image src="/edit.svg" alt="edit" width={20} height={20} />
-            
-        </Link>
-
-          <DeleteConfirmation eventId={event._id}/>
-          
-        </div>
-          <div className="absolute left-2 top-2 flex flex-col gap-4 p-1 rounded-sm bg-transparent shadow-sm transition-all">
+        <div className="absolute left-2 top-2 flex flex-col gap-4 p-1 rounded-sm bg-transparent shadow-sm transition-all">
   
   
    {
@@ -66,6 +53,20 @@ const Card = ({hidePrice,hasOrderLink,event}:cardProps) => {
       )
   }
 </div>
+
+      {isEventCreator && !hidePrice && (
+        <>
+        
+        <div className="absolute right-2 top-2 flex flex-col gap-4 rounded-xl bg-gray-400  p-3 shadow-sm transition-all">
+          <Link href={`/events/${event._id}/update`}>
+            <Image src="/edit.svg" alt="edit" width={20} height={20} />
+            
+        </Link>
+
+          <DeleteConfirmation eventId={event._id}/>
+          
+        </div>
+          
         </>
       )}
         <Link href={`/events/${event._id}`}>

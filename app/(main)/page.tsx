@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Collections from './_components/Collections'
 import { getAllEvents } from '@/lib/actions/event-actions'
+import Search from './_components/search'
 
 export default async function Home() {
   const allEvents = await getAllEvents({
@@ -36,15 +37,11 @@ export default async function Home() {
     </div>
     </section>
     <section>
-      <span>
-        hello
-      </span>
-      <span>
-        hello
-      </span>
+      <Search/>
       
     </section>
-    <div>
+    <div className='wrapper'>
+      <h1 className='font-bold text-3xl text-orange-800 pb-5 text-center'> Recent Events</h1>
       <Collections 
       data={allEvents?.data}
       emptyTitle="Not found"

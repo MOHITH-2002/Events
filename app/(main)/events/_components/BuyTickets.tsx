@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect } from 'react'
 import { loadStripe } from '@stripe/stripe-js';
 import { IEvent } from '@/lib/database/models/event-model';
