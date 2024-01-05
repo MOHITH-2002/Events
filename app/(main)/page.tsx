@@ -36,10 +36,7 @@ export default async function Home() {
           />
     </div>
     </section>
-    <section>
-      <Search/>
-      
-    </section>
+   
     <div className='wrapper'>
       <h1 className='font-bold text-3xl text-orange-800 pb-5 text-center'> Recent Events</h1>
       <Collections 
