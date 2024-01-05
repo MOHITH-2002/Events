@@ -7,7 +7,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { Input } from '@/components/ui/input';
 // import { Search } from 'lucide-react';
 
-const Search = ({ placeholder = 'Search title...' }: { placeholder?: string }) => {
+const Search = ({ placeholder = 'Search user...' }: { placeholder?: string }) => {
   const [query, setQuery] = useState('');
   const router = useRouter();
   const searchParams = useSearchParams();
