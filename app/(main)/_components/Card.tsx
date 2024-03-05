@@ -24,7 +24,7 @@ const Card = ({hidePrice,hasOrderLink,event}:cardProps) => {
 
     const {sessionClaims} = auth();
     const userId = sessionClaims?.userId as string;
-      const isEventCreator = userId === event.organizer._id.toString();
+      const isEventCreator = userId === event.organizer?._id.toString();
 
   return (
      <div className="relative flex min-h-[380px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl shadow-md transition-all hover:shadow-xl md:min-h-[438px] dark:border-2 dark:border-gray-500">
@@ -91,7 +91,7 @@ const Card = ({hidePrice,hasOrderLink,event}:cardProps) => {
         <div className="flex-between w-full">
             
           <p className="text-green-600">
-            {event.organizer.firstName} {event.organizer.lastName}
+            {event.organizer?.firstName} {event.organizer?.lastName}
           </p>
 
           {hasOrderLink && (
